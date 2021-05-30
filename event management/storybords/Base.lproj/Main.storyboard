@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mc3-OH-KHo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Createe Event View Controller-->
+        <scene sceneID="yDm-CO-Xml">
+            <objects>
+                <viewController id="0Qy-8T-b9l" customClass="CreateeEventViewController" customModule="event_management" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lYh-IR-Yr8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="qe7-4c-F8z">
+                                <rect key="frame" x="8" y="96" width="398" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="TV6-8b-Qhf"/>
+                                </constraints>
+                            </imageView>
+                            <visualEffectView hidden="YES" opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0K3-84-b1p">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Sgy-Dc-kQu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="u52-c1-qPF">
+                                <rect key="frame" x="8" y="232" width="398" height="329.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="שם אירוע" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hR2-J2-40S">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="סוג אירוע" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hn2-ew-qph">
+                                        <rect key="frame" x="0.0" y="76" width="398" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="תקציב האירוע" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mta-oA-yq9">
+                                        <rect key="frame" x="0.0" y="152" width="398" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN5-pL-ksN">
+                                        <rect key="frame" x="0.0" y="228" width="398" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="הגדר תאריך"/>
+                                        <connections>
+                                            <action selector="showDialogSetDate:" destination="0Qy-8T-b9l" eventType="touchUpInside" id="iKY-c3-9No"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="date label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlc-qn-TRf">
+                                        <rect key="frame" x="0.0" y="309" width="398" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FoL-zd-ebC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0K3-84-b1p" firstAttribute="leading" secondItem="lYh-IR-Yr8" secondAttribute="leading" id="Ifc-wO-bUd"/>
+                            <constraint firstItem="u52-c1-qPF" firstAttribute="top" secondItem="qe7-4c-F8z" secondAttribute="bottom" constant="8" id="M5d-SF-vbT"/>
+                            <constraint firstItem="qe7-4c-F8z" firstAttribute="top" secondItem="FoL-zd-ebC" secondAttribute="top" constant="8" id="Qfd-av-oJa"/>
+                            <constraint firstAttribute="bottom" secondItem="0K3-84-b1p" secondAttribute="bottom" id="UtW-kT-6af"/>
+                            <constraint firstItem="FoL-zd-ebC" firstAttribute="trailing" secondItem="u52-c1-qPF" secondAttribute="trailing" constant="8" id="ha2-fY-wnJ"/>
+                            <constraint firstItem="FoL-zd-ebC" firstAttribute="trailing" secondItem="qe7-4c-F8z" secondAttribute="trailing" constant="8" id="jNk-29-ISJ"/>
+                            <constraint firstItem="0K3-84-b1p" firstAttribute="top" secondItem="lYh-IR-Yr8" secondAttribute="top" id="lCh-zZ-Y89"/>
+                            <constraint firstItem="u52-c1-qPF" firstAttribute="leading" secondItem="FoL-zd-ebC" secondAttribute="leading" constant="8" id="oVd-wY-JMf"/>
+                            <constraint firstItem="qe7-4c-F8z" firstAttribute="leading" secondItem="FoL-zd-ebC" secondAttribute="leading" constant="8" id="tKd-fO-lfF"/>
+                            <constraint firstAttribute="trailing" secondItem="0K3-84-b1p" secondAttribute="trailing" id="uwQ-8T-nPt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="x6m-z9-Ikp">
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" systemItem="done" id="Nzr-ep-Zt9">
+                                <connections>
+                                    <action selector="saveEvent:" destination="0Qy-8T-b9l" id="xL6-gQ-mqs"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="camera" id="tlG-U5-8a7">
+                                <connections>
+                                    <action selector="takePhoto:" destination="0Qy-8T-b9l" id="FDq-To-usw"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="Rlc-qn-TRf" id="87v-4p-6Sr"/>
+                        <outlet property="datePicker" destination="BV2-LL-9Uy" id="crA-8x-dkd"/>
+                        <outlet property="eventBudgetTextField" destination="Mta-oA-yq9" id="c43-q1-yeT"/>
+                        <outlet property="eventImageView" destination="qe7-4c-F8z" id="X9x-GS-Qye"/>
+                        <outlet property="eventNameTextField" destination="hR2-J2-40S" id="eTJ-bO-xEf"/>
+                        <outlet property="eventTypeTextField" destination="Hn2-ew-qph" id="e1E-NG-z5D"/>
+                        <outlet property="setDate" destination="HAh-FU-47y" id="PEG-RJ-ZIV"/>
+                        <outlet property="visualEffectView" destination="0K3-84-b1p" id="c1S-XH-IDj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgw-GZ-DBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="HAh-FU-47y">
+                    <rect key="frame" x="0.0" y="0.0" width="369" height="311"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FOa-eb-Mmr">
+                            <rect key="frame" x="8" y="52" width="353" height="251"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="הגדר תאריך לאירוע" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmt-fr-HVm">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="BV2-LL-9Uy">
+                                    <rect key="frame" x="0.0" y="40" width="353" height="162"/>
+                                </datePicker>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWD-1A-dPW">
+                                    <rect key="frame" x="0.0" y="221" width="353" height="30"/>
+                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    <state key="normal" title="שמור תאריך">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="saveDate:" destination="0Qy-8T-b9l" eventType="touchUpInside" id="aFv-du-u4h"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="tlO-XV-8fg"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="tlO-XV-8fg" firstAttribute="trailing" secondItem="FOa-eb-Mmr" secondAttribute="trailing" constant="8" id="0hy-Fm-a8O"/>
+                        <constraint firstItem="FOa-eb-Mmr" firstAttribute="top" secondItem="tlO-XV-8fg" secondAttribute="top" constant="8" id="8u6-iM-Xtu"/>
+                        <constraint firstAttribute="bottom" secondItem="FOa-eb-Mmr" secondAttribute="bottom" constant="8" id="B0U-Lj-DTk"/>
+                        <constraint firstItem="FOa-eb-Mmr" firstAttribute="leading" secondItem="tlO-XV-8fg" secondAttribute="leading" constant="8" id="rqU-Zw-fAe"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-1657.9710144927537" y="-981.02678571428567"/>
+        </scene>
+        <!--אירועים-->
+        <scene sceneID="afZ-pP-7AI">
+            <objects>
+                <tableViewController id="UZq-Fx-L1p" customClass="EventsTableViewController" customModule="event_management" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vnF-XD-8VF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="f1A-Lz-Kh8" style="IBUITableViewCellStyleDefault" id="sL8-9A-o0C" customClass="EventTableViewCell" customModule="event_management" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="57.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sL8-9A-o0C" id="ZuB-qn-u5g">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="57.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f1A-Lz-Kh8">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="57.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UZq-Fx-L1p" id="fzV-EK-ow8"/>
+                            <outlet property="delegate" destination="UZq-Fx-L1p" id="WRf-Sn-x2F"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="אירועים" id="luO-qB-6VT">
+                        <barButtonItem key="leftBarButtonItem" title="Exit" id="am4-Ko-abm">
+                            <connections>
+                                <action selector="exitUser:" destination="UZq-Fx-L1p" id="fv7-h8-bbi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uPS-3z-xri">
+                            <connections>
+                                <segue destination="0Qy-8T-b9l" kind="show" id="qJ8-cv-WQB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvL-BH-QDQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1965" y="-225"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oe3-F1-EJp">
+            <objects>
+                <navigationController id="mc3-OH-KHo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="odL-j1-wdo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UZq-Fx-L1p" kind="relationship" relationship="rootViewController" id="0kw-A4-io6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPp-e8-dqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2852" y="-225"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
